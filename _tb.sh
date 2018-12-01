@@ -86,7 +86,7 @@ __tb_priority() {
 		;;
 		(3)
 			_alternative -C tasks \
-				"priority:priority:((1\:abc' normal' 2\:'medium' 3\:'high'))"
+				"priority:priority:((1\:'normal' 2\:'medium' 3\:'high'))"
 		;;
 	esac
 }
