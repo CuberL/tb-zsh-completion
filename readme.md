@@ -18,3 +18,9 @@ Of course, you need to install `zsh` too.
 
 you just need to put `_tb.sh` to one of your `$fpath`, restart the zsh and it will work.
 
+## Test
+
+Working under:
+
+* macOS Sierra
+* Ubuntu 16.04
