@@ -22,8 +22,9 @@ __now_arg_pos() {
 }
 
 __tb_task() {
-	lastKey="${words: -1}"
-	if [ "$lastKey" = "@" ]; then
+	pos=$(__now_arg_pos)
+	now=$(__get_arg_by_pos $pos)	
+	if [ "${now:0:1}" = "@" ]; then
 		tags=$(cat ~/.taskbook/storage/storage.json | jq --raw-output '.[] | @sh "\(.boards | .[])"' | sort | uniq)
 		_alternative \
 			"tags:tags:(($tags))"
